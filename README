@@ -1,0 +1,127 @@
+Wis - Fit information system
+Author: Jakub Pelikan
+Email: xpelik14@stud.fit.vutbr.cz
+Date: 17.4.2015
+
+
+Package structure
+
+	fitIS/ 		- python package with source code
+	postinst/ 	- .desktop file and application icon
+	tests/		- tests for Xml parser and validator
+	MANIFEST.in - manifest file
+	README 		- readme file
+	run.py 		- run application without installing
+	setup.py 	- setup skript 
+
+
+REQUIRED DEPENDENCY
+
+	python 3
+	setuptools 
+	pbkdf2 
+	Crypto / pyCrypto
+	httplib2
+	PyQt4 (required dependency SIP)
+
+
+TEST ACCOUNT
+
+	Use test account:
+		Username: xlogin00
+		Password: password
+
+
+INSTALL
+
+	1. INSTALL REQUIRED DEPENDENCY
+		python 3
+		setuptools (is available from PyPI, usually part of Python3)
+		PyQt4 (required dependency SIP)
+	
+	2. INSTALL APPLICATION PACKAGE
+		python3 setup.py install
+	  or
+	    \Python34\python.exe setup.py install
+
+	3. RUN APPLICATION
+		wis
+	  or (Windows)
+	  	\Python34\Scripts\wis.exe
+
+
+RUN WITHOUT INSTALLING
+
+	1. INSTALL REQUIRED DEPENDENCY
+		python 3
+		pbkdf2 (is available from PyPI)
+		Crypto / pyCrypto (is available from PyPI)
+		httplib2 (is available from PyPI)
+		SIP - (is available from http://www.riverbankcomputing.com/software/sip/download)
+		PyQt4  - (is available from http://www.riverbankcomputing.co.uk/software/pyqt/download)
+
+	2. RUN APPLICATION
+		python3 run.py 
+	  or (Windows)
+	  	\Python34\python.exe run.py
+
+
+INSTALL REQUIRED DEPENDENCY FROM PyPI
+
+		1. INSTALL PIP
+			Arch Linux
+				pacman -S python-pip
+			Fedora
+				yum install python3-pip
+			Debian, Ubuntu
+				apt-get install python3-pip
+			Windows 
+				It's part of Python 3 installation
+
+		2. INSTALL DEPENDENCY
+			pip3 install setuptools pbkdf2 Crypto pyCrypto httplib2
+			or 
+			\Python34\Scripts\pip3.4.exe install setuptools pbkdf2 Crypto pyCrypto httplib2
+
+
+INSTALL PyQt4 - LINUX
+
+	1. DOWNLOAD SIP 
+		Manually from (recommended):
+			http://www.riverbankcomputing.com/software/sip/download
+		or 
+			wget http://sourceforge.net/projects/pyqt/files/sip/sip-4.16.7/sip-4.16.7.tar.gz
+
+	2. INSTALL SIP
+		tar -xvf sip-4.16.7.tar.gz (or Unzip archiv manually)
+		cd sip-4.16.7
+		python3 configure.py 
+		make
+		make install
+
+	3. DOWNLOAD PyQt4 
+		Manually from (recommended):
+			http://www.riverbankcomputing.co.uk/software/pyqt/download
+		or 
+			wget http://sourceforge.net/projects/pyqt/files/PyQt4/PyQt-4.11.3/PyQt-x11-gpl-4.11.3.tar.gz
+
+	4. INSTALL PyQt4
+		tar -xvf PyQt-x11-gpl-4.11.3.tar.gz
+		cd PyQt-x11-gpl-4.11.3
+		python3 configure.py
+		make
+		make install
+
+
+INSTALL PyQt4 - WINDOWS
+
+	1. DOWNLOAD PyQt4 Windows 32/64 bit installer
+		Manually from:
+			http://www.riverbankcomputing.co.uk/software/pyqt/download
+		
+	2. RUN PyQt4 INSTALLER 
+		
+
+ICON 
+
+	Icon in ./fitIS/gui/image/icon/ are free icon available from https://www.iconfinder.com/.

@@ -1,0 +1,311 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-02 23:25+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: gui/courseData.py:36 gui/courseData.py:44 gui/courseData.py:48
+#: gui/sendNotify.py:24 gui/sendNotify.py:28
+msgid "wis"
+msgstr "FIT Information System"
+
+#: gui/courseData.py:36 gui/courseData.py:48
+msgid "ConnectionError"
+msgstr "Connection Error"
+
+#: gui/courseData.py:44
+msgid "loginFailed"
+msgstr "Login Failed"
+
+#: gui/coursesGui.py:26
+msgid "ShowWindowTitle"
+msgstr "Courses"
+
+#: fitIS/gui/coursesGui.py:106
+msgid "refreshButton"
+msgstr "Refresh"
+
+#: fitIS/gui/coursesGui.py:122 fitIS/gui/coursesGui.py:131
+msgid "summerTermButton"
+msgstr "Summer Term"
+
+#: fitIS/gui/coursesGui.py:124 fitIS/gui/coursesGui.py:133
+msgid "winterTermButton"
+msgstr "Winter Term"
+
+#: fitIS/gui/coursesGui.py:146
+msgid "refreshingButton"
+msgstr "Refresing..."
+
+
+#: gui/coursesGui.py:89
+msgid "abbrv"
+msgstr "Abbrv"
+
+#: gui/coursesGui.py:90
+msgid "type"
+msgstr "Type"
+
+#: gui/coursesGui.py:91
+msgid "cpl"
+msgstr "Cpl"
+
+#: gui/coursesGui.py:92 gui/coursesGui.py:274 gui/coursesGui.py:277
+#: gui/coursesGui.py:419 gui/coursesGui.py:422 gui/coursesGui.py:428
+#: gui/coursesGui.py:429 gui/coursesGui.py:432 gui/coursesGui.py:433
+msgid "points"
+msgstr "Points"
+
+#: gui/coursesGui.py:93
+msgid "accr"
+msgstr "Accr"
+
+#: gui/coursesGui.py:94
+msgid "grade"
+msgstr "Grade"
+
+#: gui/coursesGui.py:95
+msgid "credits"
+msgstr "Cr"
+
+#: gui/coursesGui.py:175 gui/coursesGui.py:342
+msgid "NonRegistred"
+msgstr "Not Registred"
+
+#: gui/coursesGui.py:177 gui/coursesGui.py:344
+msgid "showMore"
+msgstr "Show more"
+
+#: gui/coursesGui.py:177 gui/coursesGui.py:344
+msgid "showLess"
+msgstr "Hide"
+
+#: gui/coursesGui.py:202 gui/coursesGui.py:205 gui/coursesGui.py:249
+#: gui/coursesGui.py:253 gui/coursesGui.py:302 gui/coursesGui.py:304
+msgid "start"
+msgstr "Start"
+
+#: gui/coursesGui.py:209 gui/coursesGui.py:212 gui/coursesGui.py:256
+#: gui/coursesGui.py:259
+msgid "end"
+msgstr "End"
+
+#: gui/coursesGui.py:308 gui/coursesGui.py:313 gui/coursesGui.py:369
+#: gui/coursesGui.py:372
+msgid "min"
+msgstr "Min"
+
+#: gui/rightClickMenu.py:150
+msgid "ShowButton"
+msgstr "Show Curses"
+
+#: gui/rightClickMenu.py:172
+msgid "SettingButton"
+msgstr "Setting"
+
+#: gui/rightClickMenu.py:195
+msgid "CloseButton"
+msgstr "Exit"
+
+#: gui/rightClickMenu.py:229 gui/rightClickMenu.py:241
+msgid "autoCheckStart"
+msgstr "Start check"
+
+#: gui/rightClickMenu.py:233 gui/rightClickMenu.py:238
+msgid "autoCheckStop"
+msgstr "Stop check"
+
+msgid "autoCheckOn"
+msgstr "Check On"
+
+msgid "autoCheckOff"
+msgstr "Check Off"
+
+msgid "settingStyledTrayMenu"
+msgstr "Use color schema on Tray icon Menu"
+
+msgid "checkChangeButton"
+msgstr "Check changes"
+
+msgid "checkChangeRunButton"
+msgstr "Checking..."
+
+#: gui/sendNotify.py:24 gui/sendNotify.py:28
+msgid "noChanges"
+msgstr "No changes"
+
+#: gui/settingGui.py:18
+msgid "SettingWindowsTitle"
+msgstr "Setting"
+
+#: gui/settingGui.py:50
+msgid "Username and password"
+msgstr "Username and password"
+
+#: gui/settingGui.py:54
+msgid "Certificat choice"
+msgstr "certificate"
+
+#: gui/settingGui.py:56 gui/settingGui.py:202
+msgid "Language"
+msgstr "Language"
+
+#: gui/settingGui.py:58
+msgid "Color schema"
+msgstr "Color schema"
+
+#: gui/settingGui.py:65 gui/willcomeGui.py:76
+msgid "Username"
+msgstr "Username"
+
+#: gui/settingGui.py:76 gui/willcomeGui.py:88
+msgid "Password"
+msgstr "Password"
+
+#: gui/settingGui.py:92 gui/settingGui.py:52
+msgid "AutoCheck"
+msgstr "Automatic check"
+
+#: gui/settingGui.py:99 gui/settingGui.py:141
+msgid "ON"
+msgstr "On"
+
+#: gui/settingGui.py:101 gui/settingGui.py:138
+msgid "OFF"
+msgstr "Off"
+
+#: gui/settingGui.py:108
+msgid "Refresh time"
+msgstr "Refresh time"
+
+#: gui/settingGui.py:118
+msgid "1"
+msgstr "1"
+
+#: gui/settingGui.py:130
+msgid "300 [min]"
+msgstr "300 [min]"
+
+#: gui/settingGui.py:154
+msgid "Default Certification"
+msgstr "Default certificate"
+
+#: gui/settingGui.py:161 gui/settingGui.py:187
+msgid "YES"
+msgstr "Yes"
+
+#: gui/settingGui.py:163 gui/settingGui.py:184
+msgid "NO"
+msgstr "No"
+
+#: gui/settingGui.py:171
+msgid "My Cert."
+msgstr "My certificate"
+
+#: gui/settingGui.py:175
+msgid "Choose File"
+msgstr "Choose File"
+
+#: gui/settingGui.py:229
+msgid "Use schema"
+msgstr "Use schema"
+
+#: gui/settingGui.py:262
+msgid "Close"
+msgstr "Close"
+
+#: gui/settingGui.py:265
+msgid "Save"
+msgstr "Save"
+
+#: gui/settingGui.py:296
+msgid "Save Complete"
+msgstr "Save Complete"
+
+#: gui/willcomeGui.py:33
+msgid "WillcomeWindowTitle"
+msgstr "Wellcome"
+
+#: gui/willcomeGui.py:82 gui/willcomeGui.py:224 gui/willcomeGui.py:233
+msgid "UsernameExample"
+msgstr "xlogin00"
+
+#: gui/willcomeGui.py:94 gui/willcomeGui.py:227 gui/willcomeGui.py:236
+msgid "PasswordExample"
+msgstr "password"
+
+#: gui/willcomeGui.py:100
+msgid "SignIn"
+msgstr "Log In"
+
+#: gui/willcomeGui.py:120
+msgid "Loggin Failed"
+msgstr "Loggin Failed"
+
+#: gui/willcomeGui.py:120
+msgid ""
+"Loggin Failed,\n"
+" pleas check your username and Password"
+msgstr "Loggin Failed,\n"
+" pleas check your Username and Password"
+
+#: gui/willcomeGui.py:120
+msgid "OK"
+msgstr "Ok"
+
+#: gui/willcomeGui.py:166
+msgid "backButton"
+msgstr "Back"
+
+#: gui/willcomeGui.py:170
+msgid "nextButton"
+msgstr "Next"
+
+#: gui/willcomeGui.py:174 gui/willcomeGui.py:187
+msgid "skipButton"
+msgstr "Skip"
+
+#: gui/willcomeGui.py:214
+msgid "finishButton"
+msgstr "Finish"
+
+#: gui/willcomeGui.py:59
+msgid "loginTitle"
+msgstr "Information System"
+
+#: gui/willcomeGui.py:217
+msgid "willcomeStep0"
+msgstr "Open applicaton"
+
+#: gui/willcomeGui.py:217
+msgid "willcomeStep1"
+msgstr "Application Icon"
+
+#: gui/willcomeGui.py:217
+msgid "willcomeStep2"
+msgstr "Icon menu"
+
+#: gui/willcomeGui.py:217
+msgid "willcomeStep3"
+msgstr "Notification"
+
+#: gui/willcomeGui.py:217
+msgid "willcomeStep4"
+msgstr "Application setting"
+
+#: gui/willcomeGui.py:217
+msgid "willcomeStep5"
+msgstr "Show curses and detail"

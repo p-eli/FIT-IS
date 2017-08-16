@@ -1,0 +1,7 @@
+include wis README
+recursive-include fitIS/gui/cert *
+recursive-include fitIS/gui/image *
+recursive-include fitIS/gui/lang *
+recursive-include fitIS/gui/style *
+recursive-include fitIS/gui/xml *
+recursive-include postinst *

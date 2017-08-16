@@ -1,0 +1,346 @@
+QScrollArea{
+	background-color: transparent;
+	border-color: transparent;
+	border-style: solid;
+}
+
+#mainWillcomeWidget, #mainWidget{
+	background-color: #689F38;
+	padding: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: center;
+}
+
+#mainWidgetItem, #mainWidgetItemShow, #mainWidgetItemShow:hover {
+	background-color: transparent;
+	text-align: center;
+	border-radius: 18;
+}
+
+#mainWidgetItem:hover {
+	border-width: 2px;
+	border-color: #FF9100;
+	border-style: inset;
+}
+
+#willcomeWidget, #borderWidget ,#gradientWidget ,QMessageBox {
+	background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop:  0 #AED581,stop: 0.7 #8BC34A, stop: 1 #558B2F);
+	text-align: center;
+	border-radius: 18;
+	min-height: 50;
+}
+ #mainWidgetItemShow, #mainWidgetItemShow:hover {
+	background-color: transparent;
+	text-align: center;
+	border-radius: 18;
+	border-bottom-left-radius: 8;
+    border-bottom-right-radius: 8;
+}
+
+#settingMainWidget, #itemWidget{
+	background-color: transparent;
+}
+
+#mainWidgetSubItem{
+	background-color: #E0E0E0;
+	border-width: 3px;
+	border-color: #C5E1A5;
+	border-style: inset;
+	border-radius: 5;
+	padding: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: left;
+}
+
+#detailCursesVariantWidget{
+	border-width: 1px;
+	border-color: #3B3738;
+	border-style: solid;
+	border-radius: 3;
+	padding: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: center;
+}
+
+QLabel {
+	color: #212121;
+	font-size: 25px;
+	qproperty-alignment: AlignCenter;
+}
+
+#courseItem{
+	color: #FFFFFF;
+	font-size: 25px;
+	qproperty-alignment: AlignCenter;
+}
+
+#courseName, #settingItem{
+	color: #212121;
+	font-size: 28px;
+	font-weight: bold;
+	qproperty-alignment: AlignCenter;
+}
+
+#itemName{
+	color: #DD2C00;
+	font-size: 28px;
+	font-weight: bold;
+	qproperty-alignment: AlignLeft;
+}
+
+#abbrv {
+	color: #FF3D00;
+	font-weight: bold;
+	qproperty-alignment: AlignCenter;
+}
+
+#courseHintItem{
+	color: #DD2C00;
+	font-size: 14px;
+	qproperty-alignment: AlignTop AlignRight;
+	padding: 0px;
+}
+
+#hintItem{
+	color: #616161;
+	font-size: 14px;
+	qproperty-alignment: AlignTop AlignRight;
+	padding: 0px;
+}
+
+#alLeft{
+	qproperty-alignment: AlignLeft;
+}
+
+#alRight{
+	qproperty-alignment: AlignRight;
+}
+
+#header{ 
+	qproperty-alignment: AlignLeft; 
+}
+
+#courseItemSelect, #courseItemSingle, #courseItemAccr, #courseItemMulti{
+	background-color: #FAFAFA;
+	border-width: 0px;
+	border-style: inset;
+	border-radius: 5;
+	padding: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: center;
+}
+
+#detailCursesVariantWidgetEntry{
+	background-color: #F4511E;
+	border-width: 1.5px;
+	border-color: #212121;
+	border-style: groove;
+	border-radius: 5;
+	padding: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: center;
+}
+
+#buttonWidget{
+	background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #FF6E40,stop: 0.8 #FF3D00, stop: 1 #DD2C00);
+	border-width: 0.5px;
+	border-color: #EEEEEE;
+    border-bottom-left-radius: 10;
+    border-bottom-right-radius: 10;
+}
+
+#settingButton{
+	background-color: transparent;
+	color: #FFFFFF;
+	min-height: 30px;
+	padding: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10;
+	font-weight: bold;
+}
+
+#cursesButton{
+	background-color: transparent;
+	color: #FFFFFF;
+	min-height: 10px;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10;
+	font-weight: bold;
+}
+
+#settingButton:hover, #cursesButton:hover{
+	border-color: #FAFAFA;
+	border-width: 2px;
+	border-style: inset;
+}
+
+#settingButtonNoEnabled{
+	color: #BDBDBD;
+	min-height: 30px;
+	padding: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+QComboBox {
+	background-color: #FAFAFA;
+	color: #424242;
+	border-width: 0px;
+	border-style: solid;
+	min-height: 30px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 20px;
+}
+
+QComboBox:hover{
+	background-color: #C5E1A5;
+	border-radius: 8;
+}
+
+
+QComboBox QListView {
+    background: #FF6E40;
+    border-width: 1px;
+	border-color: #424242;
+	border-style: solid;
+	border-radius: 3;
+}
+
+#leftClickMenu{
+	background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop:  0 #AED581,stop: 0.7 #8BC34A, stop: 1 #558B2F);
+	border-width: 5px;
+	border-color: #689F38;
+	border-style: groove;
+	border-radius: 8;
+	padding: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#leftClickMenuButton{
+	background-color: transparent;
+	padding: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: left;
+}
+
+#leftClickMenuButton:hover{
+	border-radius: 8;
+	text-align: center;
+	border-width: 2px;
+	border-color: #FF9100;
+	border-style: inset;
+}
+
+#leftClickMenuFont{
+	qproperty-alignment: AlignLeft;
+	padding: 0px;
+	padding-left: 5px;
+	padding-right: 0px;
+	color: #212121;
+	font-size: 18px;
+}
+
+#userNamePasswordWidget{
+	background-color: #FAFAFA;
+	border-width: 3px;
+	border-color: #C5E1A5; 
+	border-style: inset;
+	border-radius: 10;
+	padding: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: left;
+}
+
+#userNamePasswordTitle{
+	color: #212121;
+	background-color: transparent;
+	border-width: 0px;
+	border-style: solid;
+	padding: 10px;
+	padding-left: 5px;
+	padding-right: 0px;
+	font-weight: bold;
+	qproperty-alignment: AlignLeft;
+}
+
+#userNamePasswordValue, #qSliderValue{
+	color: #616161;
+	background-color: transparent;
+	border-width: 0px;
+	border-style: solid;
+	padding: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: left;
+	font-size: 20px;
+	qproperty-alignment: AlignLeft;
+}
+
+#userNamePasswordValue:hover{
+	background-color: #F1F8E9;
+	border-radius: 8;
+}
+
+QSlider{
+	background-color: transparent;
+	border-width: 0px;
+	border-style: solid;
+	padding: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: left;
+}
+
+#signInButton, QMessageBox QPushButton{
+	background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #FF6E40,stop: 0.8 #FF3D00, stop: 1 #DD2C00);
+	border-width: 0.5px;
+	border-color: #E0E0E0;
+	border-style: inset;
+	border-radius: 10;
+	min-height: 30px;
+	min-width: 100px;
+	padding: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+#signInButton:hover, QMessageBox QPushButton:hover{
+	border-color: #FAFAFA;
+	border-width: 2px;
+}
+
+#orangeSeparator{
+	color: #FF3D00;
+
+}
+#greySeparator{
+	color: #9E9E9E;
+}
+
+#whiteSeparator{
+	color: #FFFFFF;
+}
+
+#blackSeparator{
+	background-color: #000000;
+}
+
+#titleWillcomeWidget {
+    font-weight: bold;
+    font-size: 45px;
+    color: #FF3D00;
+}

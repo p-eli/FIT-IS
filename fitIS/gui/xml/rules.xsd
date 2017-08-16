@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="iso-8859-2"?>
+<xsd:schema xmlns="http://www.fit.vutbr.cz/study/courses" 
+   targetNamespace="http://www.fit.vutbr.cz/study/courses" 
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="courses" type="CoursesType">
+    <xsd:unique name="course_id">
+      <xsd:selector xpath="course"/>
+      <xsd:field xpath="@id"/>
+    </xsd:unique>
+  </xsd:element>
+  <xsd:complexType name="CoursesType">
+    <xsd:sequence>
+      <xsd:element name="course" type="CourseType" minOccurs="0" maxOccurs="999"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CourseType">
+    <xsd:sequence>
+      <xsd:element name="title" minOccurs="0" maxOccurs="2" type="TitleType"/>
+      <xsd:element name="accreditation" minOccurs="0" maxOccurs="1" type="CourseAccrType"/>
+      <xsd:element name="examination" minOccurs="0" maxOccurs="1" type="CourseExamType"/>
+      <xsd:element name="item" minOccurs="0" maxOccurs="999" type="ItemType"/>
+    </xsd:sequence>
+    <xsd:attribute name="abbrv" type="xsd:string"/>
+    <xsd:attribute name="credits" type="xsd:nonNegativeInteger"/>
+    <xsd:attribute name="type" type="CourseEntryType"/>
+    <xsd:attribute name="completion" type="CourseCompletionType"/>
+    <xsd:attribute name="points" type="CoursePointsType"/>
+    <xsd:attribute name="upd_ts" type="xsd:dateTime"/>
+    <xsd:attribute name="id" type="xsd:nonNegativeInteger"/>
+    <xsd:attribute name="csid" type="xsd:nonNegativeInteger"/>
+    <xsd:attribute name="sem" type="SemesterType"/>
+  </xsd:complexType>
+  <xsd:complexType name="CourseAccrType">
+    <xsd:sequence>
+      <xsd:element name="teacher" type="xsd:string"/>
+    </xsd:sequence>
+    <xsd:attribute name="status" type="CourseAccrStatusType"/>
+    <xsd:attribute name="date" type="xsd:date"/>
+  </xsd:complexType>
+  <xsd:complexType name="CourseExamType">
+    <xsd:sequence>
+      <xsd:element name="teacher" type="xsd:string"/>
+    </xsd:sequence>
+    <xsd:attribute name="count" type="xsd:nonNegativeInteger"/>
+    <xsd:attribute name="date" type="xsd:date"/>
+    <xsd:attribute name="grade" type="CourseGradeType"/>
+  </xsd:complexType>
+  <xsd:simpleType name="CourseEntryType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="P">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Povinný předmět</xsd:documentation>
+          <xsd:documentation xml:lang="en">Compulsory courses</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PV">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Povinně volitelný předmět</xsd:documentation>
+          <xsd:documentation xml:lang="en">Compulsory-Elective courses</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="V">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Volitelný předmět</xsd:documentation>
+          <xsd:documentation xml:lang="en">Elective courses</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="D">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Doporučený předmět</xsd:documentation>
+          <xsd:documentation xml:lang="en">Recommended courses</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PVH"> 
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Povinně volitelný humanitní předmět</xsd:documentation>
+          <xsd:documentation xml:lang="en">Compulsory-Elective course - group H</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PVC"> 
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Povinně volitelný - skupina C</xsd:documentation>
+          <xsd:documentation xml:lang="en">Compulsory-Elective course - group C</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PVO"> 
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Povinně volitelný - skupina O</xsd:documentation>
+          <xsd:documentation xml:lang="en">Compulsory-Elective course - group O</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PVS"> 
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Povinně volitelný - skupina S</xsd:documentation>
+          <xsd:documentation xml:lang="en">Compulsory-Elective course - group S</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PVB"> 
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Povinně volitelný - skupina B</xsd:documentation>
+          <xsd:documentation xml:lang="en">Compulsory-Elective course - group B</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PVM"> 
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Povinně volitelný - skupina M</xsd:documentation>
+          <xsd:documentation xml:lang="en">Compulsory-Elective course - group M</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PVI"> 
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Povinně volitelný - skupina I</xsd:documentation>
+          <xsd:documentation xml:lang="en">Compulsory-Elective course - group I</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PVF"> 
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Povinně volitelný - skupina F</xsd:documentation>
+          <xsd:documentation xml:lang="en">Compulsory-Elective course - group F</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PVN"> 
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Povinně volitelný - skupina N</xsd:documentation>
+          <xsd:documentation xml:lang="en">Compulsory-Elective course - group N</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PVL"> 
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Povinně volitelný - skupina L</xsd:documentation>
+          <xsd:documentation xml:lang="en">Compulsory-Elective course - group L</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PVD"> 
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Povinně volitelný - skupina D</xsd:documentation>
+          <xsd:documentation xml:lang="en">Compulsory-Elective course - group D</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PVG"> 
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Povinně volitelný - skupina G</xsd:documentation>
+          <xsd:documentation xml:lang="en">Compulsory-Elective course - group G</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="PVE"> 
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Povinně volitelný - skupina E</xsd:documentation>
+          <xsd:documentation xml:lang="en">Compulsory-Elective course - group E</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CourseCompletionType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Za">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Zápočet</xsd:documentation>
+          <xsd:documentation xml:lang="en">Accreditation</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Zk">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Zkouška</xsd:documentation>
+          <xsd:documentation xml:lang="en">Examination</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="ZaZk">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Zápočet+zkouška</xsd:documentation>
+          <xsd:documentation xml:lang="en">Accreditation+exam</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="Klz">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Klasifikovaný zápočet</xsd:documentation>
+          <xsd:documentation xml:lang="en">Classified accreditation</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="-">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">-</xsd:documentation>
+          <xsd:documentation xml:lang="en">-</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CourseAccrStatusType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="yes">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Zápočet udělen</xsd:documentation>
+          <xsd:documentation xml:lang="en">Accreditation Yes</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="no">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Zápočet neudělen</xsd:documentation>
+          <xsd:documentation xml:lang="en">Accreditation No</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="-">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Zápočet nezadán</xsd:documentation>
+          <xsd:documentation xml:lang="en">Accreditation not entered</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CourseGradeType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="1A">
+        <xsd:annotation>
+          <xsd:documentation>1.0</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="2B">
+        <xsd:annotation>
+          <xsd:documentation>1.5</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="2C">
+        <xsd:annotation>
+          <xsd:documentation>2.0</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="3D">
+        <xsd:annotation>
+          <xsd:documentation>2.5</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="3E">
+        <xsd:annotation>
+          <xsd:documentation>3.0</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="4F">
+        <xsd:annotation>
+          <xsd:documentation>4.0</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CoursePointsType">
+    <xsd:restriction base="xsd:double">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="100"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SemesterType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Z">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Zimní semester</xsd:documentation>
+          <xsd:documentation xml:lang="en">Winter Term</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="L">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Letní semester</xsd:documentation>
+          <xsd:documentation xml:lang="en">Summer Term</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="ItemType">
+    <xsd:sequence>
+      <xsd:element name="title" minOccurs="0" maxOccurs="2"  type="TitleType"/>
+      <xsd:element name="entry" minOccurs="0" maxOccurs="1" type="EntryType"/>
+      <xsd:element name="variant" minOccurs="0" maxOccurs="999"  type="VariantType"/>
+    </xsd:sequence>
+    <xsd:attribute name="id" type="xsd:nonNegativeInteger"/>
+    <xsd:attribute name="num" type="xsd:nonNegativeInteger"/>
+    <xsd:attribute name="type" type="ItemTypeType"/>
+    <xsd:attribute name="start" type="xsd:date"/>
+    <xsd:attribute name="end" type="xsd:date"/>
+    <xsd:attribute name="registered" type="xsd:nonNegativeInteger"/>
+    <xsd:attribute name="max" type="xsd:nonNegativeInteger"/>
+    <xsd:attribute name="min" type="xsd:nonNegativeInteger"/>
+    <xsd:attribute name="entry" type="ItemEntryType"/>
+    <xsd:attribute name="upd_ts" type="xsd:dateTime"/>
+    <xsd:attribute name="reg_start" type="xsd:dateTime"/>
+    <xsd:attribute name="reg_end" type="xsd:dateTime"/>
+    <xsd:attribute name="bonus" type="xsd:nonNegativeInteger"/>
+    <xsd:attribute name="limit" type="xsd:nonNegativeInteger"/>
+  </xsd:complexType>
+  <xsd:complexType name="VariantType">
+    <xsd:sequence>
+      <xsd:element name="title" minOccurs="0" maxOccurs="2" type="TitleType"/>
+      <xsd:element name="entry" minOccurs="0" maxOccurs="1" type="EntryType"/>
+    </xsd:sequence>
+    <xsd:attribute name="id" type="xsd:nonNegativeInteger"/>
+    <xsd:attribute name="registered" type="xsd:nonNegativeInteger"/>
+    <xsd:attribute name="upd_ts" type="xsd:dateTime"/>
+    <xsd:attribute name="limit" type="xsd:nonNegativeInteger"/>
+    <xsd:attribute name="date" type="xsd:date"/>
+    <xsd:attribute name="entry" type="ItemEntryType"/>
+  </xsd:complexType>
+  <xsd:complexType name="EntryType">
+    <xsd:attribute name="reg_type" type="EntryRegType"/>
+    <xsd:attribute name="reg_time" type="xsd:dateTime"/>
+    <xsd:attribute name="upd_ts" type="xsd:dateTime"/>
+    <xsd:attribute name="points" type="CoursePointsType"/>
+    <xsd:attribute name="who" type="xsd:string"/>
+    <xsd:attribute name="date" type="xsd:date"/>
+  </xsd:complexType>
+  <xsd:simpleType name="ItemTypeType"> 
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="single">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Výběr z jedné varianty</xsd:documentation>
+          <xsd:documentation xml:lang="en">Single choice</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="select">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Výběr jedné z variant</xsd:documentation>
+          <xsd:documentation xml:lang="en">Select</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="accr">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Zápočet</xsd:documentation>
+          <xsd:documentation xml:lang="en">Accreditation</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="multi">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Výběr více variant</xsd:documentation>
+          <xsd:documentation xml:lang="en">Multiple choice</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="EntryRegType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="all">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Zapsán automaticky</xsd:documentation>
+          <xsd:documentation xml:lang="en">Auto</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="stud">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Zapsán sám</xsd:documentation>
+          <xsd:documentation xml:lang="en">Stud</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="allz">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Zapsán automaticky se zápočtem</xsd:documentation>
+          <xsd:documentation xml:lang="en">Accra</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ItemEntryType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="listed">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Přihlašuje učitel</xsd:documentation>
+          <xsd:documentation xml:lang="en">Adm</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="all">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Automaticky jsou všichni přihlášeni</xsd:documentation>
+          <xsd:documentation xml:lang="en">All</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="allz">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Automaticky jsou všichni se zápočtem přihlášeni</xsd:documentation>
+          <xsd:documentation xml:lang="en">Accra</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="login">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Přihlašuje se student</xsd:documentation>
+          <xsd:documentation xml:lang="en">Stud</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="loginz">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="cs">Přihlašuje se student se zápočtem</xsd:documentation>
+          <xsd:documentation xml:lang="en">Stud accr</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="TitleType">
+    <xsd:simpleContent>
+          <xsd:extension base="xsd:string">
+              <xsd:attribute name="lang" type="xsd:string"/>
+          </xsd:extension>
+        </xsd:simpleContent>
+  </xsd:complexType>
+</xsd:schema>

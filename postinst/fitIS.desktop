@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Wis
+Exec=wis
+Icon=fitIS.png
+Terminal=false
+Type=Application
+StartupNotify=true
+Comment=FIT Information System

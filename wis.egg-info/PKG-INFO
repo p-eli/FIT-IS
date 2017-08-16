@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: wis
+Version: 1.0
+Summary: Fit information system
+Home-page: -
+Author: Jakub Pelikan
+Author-email: xpelik14@stud.fit.vutbr.cz
+License: UNKNOWN
+Description: -
+Keywords: wis,fit,vutbr
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: OnlyOperating System :: OS IndependentDevelopment Status :: 3 - AlphaLicense :: OSI Approved :: GNU General Public License v3 (GPLv3)
